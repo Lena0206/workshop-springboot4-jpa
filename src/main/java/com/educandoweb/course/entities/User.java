@@ -28,7 +28,7 @@ public class User implements Serializable{
 	private String phone;
 	private String password;
 	
-	@JsonIgnore   //como "user" e "order" possuem uma associação de mão-dupla, isso pode causar um laço infinito. Esta anotação evita isso.
+	@JsonIgnore   //como "user" e "order" possuem uma associação de mão-dupla, isso pode causar um laço infinito na hora de fazer uma requisição http. Esta anotação evita isso.
 	@OneToMany(mappedBy = "client")
 	private List<Order> orders = new ArrayList<>();
 	
