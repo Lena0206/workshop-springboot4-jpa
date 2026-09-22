@@ -25,7 +25,7 @@ public class Payment implements Serializable{
 	private Instant moment;
 	
 	@JsonIgnore
-	@OneToOne //Essas anotações são colocadas na classe dependente, no caso, a classe Payment
+	@OneToOne
 	@MapsId
 	private Order order;
 	
